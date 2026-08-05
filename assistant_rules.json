@@ -1,0 +1,54 @@
+{
+  "version": "8.4.4",
+  "finding_priorities": {
+    "CRITICAL": 4,
+    "HIGH": 3,
+    "MEDIUM": 2,
+    "LOW": 1,
+    "INFO": 0
+  },
+  "executive_status": {
+    "CRITICAL": {
+      "max_health": 49.9,
+      "label": "CRITICAL",
+      "message": "Immediate engineering review is required before release, programming or warranty authorization."
+    },
+    "POOR": {
+      "max_health": 69.9,
+      "label": "POOR",
+      "message": "Corrective action and repeat verification are required."
+    },
+    "FAIR": {
+      "max_health": 84.9,
+      "label": "FAIR",
+      "message": "The configuration is usable for review but contains open actions."
+    },
+    "GOOD": {
+      "max_health": 100,
+      "label": "GOOD",
+      "message": "No critical configuration action is indicated by the available evidence."
+    }
+  },
+  "action_phases": [
+    "VERIFY_EVIDENCE",
+    "CORRECT_CONFIGURATION",
+    "REPEAT_DIAGNOSTIC",
+    "ENGINEERING_REVIEW",
+    "DOCUMENT_AND_CLOSE"
+  ],
+  "confidence": {
+    "base": 45,
+    "root_cause_weight": 0.25,
+    "decision_weight": 0.2,
+    "consistency_weight": 0.15,
+    "data_completeness_weight": 0.15,
+    "fleet_pattern_bonus": 10,
+    "persistent_dtc_bonus": 5,
+    "cap": 95
+  },
+  "disclaimers": [
+    "The Engineering Assistant is rule based and does not replace OEM diagnostic procedures.",
+    "The output is not an automatic warranty, replacement, programming or vehicle-release authorization.",
+    "Dependency and root-cause results must be verified against the official vehicle E/E architecture."
+  ]
+}
