@@ -1,0 +1,39 @@
+{
+  "version": "10.9",
+  "required_session_fields": [
+    "ECU ID",
+    "ECU Name",
+    "VIN",
+    "Hardware Number",
+    "Application SW",
+    "Calibration SW",
+    "Basic SW",
+    "Bootloader"
+  ],
+  "required_reference_fields": [
+    "ECU Variant"
+  ],
+  "critical_fields": [
+    "ECU ID",
+    "Hardware Number",
+    "Application SW",
+    "Bootloader"
+  ],
+  "thresholds": {
+    "ready": 90,
+    "ready_with_warnings": 70,
+    "minimum_ecu_count": 5,
+    "minimum_reference_match_rate": 80,
+    "maximum_duplicate_rate": 2,
+    "maximum_missing_critical_rate": 5
+  },
+  "weights": {
+    "schema_completeness": 25,
+    "critical_field_completeness": 25,
+    "duplicate_control": 15,
+    "vin_integrity": 10,
+    "reference_match": 15,
+    "parser_coverage": 10
+  },
+  "disclaimer": "The readiness gate validates uploaded data quality only. It does not confirm vehicle compliance or authorize engineering decisions."
+}

@@ -1,0 +1,73 @@
+{
+  "version": "10.1",
+  "fields": {
+    "ECU Name": {
+      "category": "IDENTITY",
+      "severity": "INFORMATIONAL"
+    },
+    "VIN": {
+      "category": "IDENTITY",
+      "severity": "INFORMATIONAL"
+    },
+    "Hardware Number": {
+      "category": "HARDWARE",
+      "severity": "CRITICAL"
+    },
+    "Part Number": {
+      "category": "HARDWARE",
+      "severity": "CRITICAL"
+    },
+    "Application SW": {
+      "category": "SOFTWARE",
+      "severity": "MAJOR"
+    },
+    "Calibration SW": {
+      "category": "SOFTWARE",
+      "severity": "MINOR"
+    },
+    "Basic SW": {
+      "category": "SOFTWARE",
+      "severity": "MINOR"
+    },
+    "Software Number": {
+      "category": "SOFTWARE",
+      "severity": "MAJOR"
+    },
+    "Bootloader": {
+      "category": "SOFTWARE",
+      "severity": "CRITICAL"
+    },
+    "Installed Release": {
+      "category": "RELEASE",
+      "severity": "MAJOR"
+    },
+    "Target Release": {
+      "category": "RELEASE",
+      "severity": "MAJOR"
+    },
+    "Release Family": {
+      "category": "RELEASE",
+      "severity": "MAJOR"
+    }
+  },
+  "presence_severity": {
+    "ADDED": "MAJOR",
+    "REMOVED": "CRITICAL"
+  },
+  "default_ignore_fields": [
+    "VIN"
+  ],
+  "status_order": [
+    "REMOVED",
+    "ADDED",
+    "MODIFIED",
+    "UNCHANGED"
+  ],
+  "severity_order": [
+    "CRITICAL",
+    "MAJOR",
+    "MINOR",
+    "INFORMATIONAL",
+    "NONE"
+  ]
+}

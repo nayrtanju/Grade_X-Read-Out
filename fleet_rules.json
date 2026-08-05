@@ -1,0 +1,27 @@
+{
+  "version": "8.4.3",
+  "top_n": 10,
+  "trend_thresholds": {
+    "high_problem_rate_percent": 30,
+    "high_persistent_dtc_rate_percent": 20,
+    "low_consistency_percent": 70,
+    "low_vehicle_health_percent": 60
+  },
+  "severity_weights": {
+    "COMPLIANT": 0,
+    "UPDATE_AVAILABLE": 1,
+    "PARTIAL_MATCH": 2,
+    "REVIEW": 3,
+    "NO_REFERENCE": 3,
+    "MISMATCH": 5,
+    "WRONG_RELEASE": 5
+  },
+  "warranty_priority": {
+    "NO_WARRANTY_ACTION": 0,
+    "SOFTWARE_CORRECTION_FIRST": 2,
+    "FURTHER_DIAGNOSTIC_REQUIRED": 3,
+    "HARDWARE_VERIFICATION_REQUIRED": 4,
+    "REPLACEMENT_REVIEW": 5,
+    "ENGINEERING_ESCALATION": 6
+  }
+}

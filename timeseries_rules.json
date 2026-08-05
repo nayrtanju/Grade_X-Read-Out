@@ -1,0 +1,43 @@
+{
+  "version": "9.2",
+  "metric_directions": {
+    "vehicle_health": "HIGHER_IS_BETTER",
+    "compliance_rate": "HIGHER_IS_BETTER",
+    "release_consistency": "HIGHER_IS_BETTER",
+    "average_risk": "LOWER_IS_BETTER",
+    "open_findings": "LOWER_IS_BETTER",
+    "persistent_dtcs": "LOWER_IS_BETTER",
+    "root_cause_confidence": "HIGHER_IS_BETTER"
+  },
+  "thresholds": {
+    "significant_health_change": 5.0,
+    "significant_risk_change": 5.0,
+    "significant_compliance_change": 5.0,
+    "significant_consistency_change": 5.0,
+    "critical_regression_score": -15.0,
+    "strong_improvement_score": 15.0
+  },
+  "weights": {
+    "vehicle_health": 0.28,
+    "compliance_rate": 0.2,
+    "release_consistency": 0.18,
+    "average_risk": 0.18,
+    "open_findings": 0.08,
+    "persistent_dtcs": 0.08
+  },
+  "state_rank": {
+    "GOOD": 4,
+    "FAIR": 3,
+    "POOR": 2,
+    "CRITICAL": 1,
+    "": 0
+  },
+  "warranty_rank": {
+    "NO_WARRANTY_ACTION": 0,
+    "SOFTWARE_CORRECTION_FIRST": 1,
+    "FURTHER_DIAGNOSTIC_REQUIRED": 2,
+    "HARDWARE_VERIFICATION_REQUIRED": 3,
+    "REPLACEMENT_REVIEW": 4,
+    "ENGINEERING_ESCALATION": 5
+  }
+}

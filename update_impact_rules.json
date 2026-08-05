@@ -1,0 +1,51 @@
+{
+  "version": "9.3.3",
+  "compatibility_thresholds": {
+    "SAFE": 85,
+    "CONDITIONAL": 65,
+    "HIGH_RISK": 0
+  },
+  "impact_weights": {
+    "dependency_depth": 0.2,
+    "ecu_criticality": 0.2,
+    "current_risk": 0.15,
+    "release_gap": 0.2,
+    "configuration_status": 0.15,
+    "persistent_dtc": 0.1
+  },
+  "penalties": {
+    "wrong_release": 25,
+    "mismatch": 20,
+    "mixed_package": 15,
+    "persistent_dtc": 12,
+    "critical_ecu": 15,
+    "major_ecu": 8,
+    "direct_dependency": 10,
+    "indirect_dependency": 5,
+    "release_family_change": 20,
+    "unknown_target_release": 25
+  },
+  "companion_update_rules": {
+    "direct_downstream_requires_review": true,
+    "critical_downstream_requires_update": true,
+    "wrong_release_requires_update": true,
+    "mismatch_requires_update": true,
+    "different_release_family_requires_update": true
+  },
+  "sequence_role_order": [
+    "GATEWAY",
+    "POWERTRAIN",
+    "TRANSMISSION",
+    "BRAKES",
+    "STEERING",
+    "ADAS",
+    "BODY",
+    "CLUSTER",
+    "RESTRAINTS",
+    "TRANSFER_CASE",
+    "INFOTAINMENT",
+    "HVAC",
+    "OTHER"
+  ],
+  "disclaimer": "The simulator provides rule-based engineering decision support and does not replace official programming instructions or release approval."
+}

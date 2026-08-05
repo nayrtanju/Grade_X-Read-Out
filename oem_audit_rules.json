@@ -1,0 +1,36 @@
+{
+  "version": "10.6",
+  "decision_thresholds": {
+    "PASS": 90,
+    "CONDITIONAL_PASS": 70,
+    "FAIL": 0
+  },
+  "mandatory_fail_checks": [
+    "SOFTWARE_COMPLIANCE",
+    "HARDWARE_COMPATIBILITY",
+    "BOOTLOADER_INTEGRITY",
+    "RELEASE_COVERAGE",
+    "PERSISTENT_DTC",
+    "NETWORK_HEALTH"
+  ],
+  "weights": {
+    "SOFTWARE_COMPLIANCE": 18,
+    "HARDWARE_COMPATIBILITY": 14,
+    "BOOTLOADER_INTEGRITY": 10,
+    "CALIBRATION_INTEGRITY": 8,
+    "RELEASE_COVERAGE": 12,
+    "RELEASE_CONSISTENCY": 8,
+    "PERSISTENT_DTC": 10,
+    "NETWORK_HEALTH": 8,
+    "CONFIGURATION_DIFF": 5,
+    "UPDATE_PATH": 4,
+    "VIN_INTEGRITY": 3
+  },
+  "status_scores": {
+    "PASS": 100,
+    "WARNING": 60,
+    "FAIL": 0,
+    "NOT_AVAILABLE": 50
+  },
+  "disclaimer": "The audit is rule based and does not replace official OEM release approval, programming instructions, homologation evidence or engineering sign-off."
+}

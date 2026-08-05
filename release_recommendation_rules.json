@@ -1,0 +1,35 @@
+{
+  "version": "9.4",
+  "weights": {
+    "scenario_score": 0.3,
+    "compatibility_score": 0.22,
+    "path_score": 0.15,
+    "vehicle_health": 0.1,
+    "release_consistency": 0.08,
+    "historical_success": 0.08,
+    "companion_burden": 0.04,
+    "high_risk_burden": 0.03
+  },
+  "thresholds": {
+    "recommended": 80,
+    "recommended_with_conditions": 65,
+    "engineering_review": 0,
+    "minimum_history_samples": 2
+  },
+  "penalties": {
+    "mixed_package": 12,
+    "persistent_dtc": 8,
+    "engineering_escalation": 15,
+    "critical_vehicle_status": 12,
+    "unknown_release": 15,
+    "cross_model_year": 20
+  },
+  "action_phases": [
+    "PRE_CHECK",
+    "PACKAGE_CONFIRMATION",
+    "PROGRAMMING",
+    "POST_PROGRAMMING_VALIDATION",
+    "ENGINEERING_SIGN_OFF"
+  ],
+  "disclaimer": "The recommendation is rule based and must be confirmed against the official OEM release package and programming instructions."
+}

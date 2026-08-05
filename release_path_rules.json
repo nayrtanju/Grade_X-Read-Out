@@ -1,0 +1,31 @@
+{
+  "version": "9.3.4",
+  "path_thresholds": {
+    "direct_minor_gap_max": 0.1,
+    "direct_major_gap_max": 1.0,
+    "safe_score": 85,
+    "conditional_score": 65
+  },
+  "path_penalties": {
+    "missing_intermediate_release": 20,
+    "major_year_jump": 30,
+    "mixed_package": 15,
+    "high_risk_scenario": 25,
+    "companion_update": 4,
+    "critical_companion": 8,
+    "persistent_dtc": 10
+  },
+  "scenario_weights": {
+    "compatibility": 0.45,
+    "required_updates": 0.2,
+    "high_risk_ecus": 0.2,
+    "sequence_length": 0.1,
+    "release_gap": 0.05
+  },
+  "recommendations": {
+    "DIRECT": "Proceed only with the approved direct programming path and post-programming validation.",
+    "STAGED": "Use a staged programming path through the approved intermediate release.",
+    "ENGINEERING_REVIEW": "Do not proceed until release compatibility and the programming path are confirmed by engineering."
+  },
+  "disclaimer": "Release paths are inferred from available Grade-X and reference data. Official OEM release metadata remains authoritative."
+}

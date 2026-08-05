@@ -1,0 +1,229 @@
+{
+  "version": "9.3.1",
+  "roles": {
+    "GATEWAY": {
+      "aliases": [
+        "ETGW",
+        "GATEWAY",
+        "CGW",
+        "GW"
+      ],
+      "base_criticality": 100
+    },
+    "POWERTRAIN": {
+      "aliases": [
+        "PCM",
+        "ECM",
+        "EMS",
+        "DME",
+        "ENGINE"
+      ],
+      "base_criticality": 95
+    },
+    "TRANSMISSION": {
+      "aliases": [
+        "TCM",
+        "TCU",
+        "EGS",
+        "TRANSMISSION"
+      ],
+      "base_criticality": 85
+    },
+    "BRAKES": {
+      "aliases": [
+        "ABS",
+        "ESC",
+        "ESP",
+        "DSC",
+        "EBCM"
+      ],
+      "base_criticality": 92
+    },
+    "STEERING": {
+      "aliases": [
+        "EPS",
+        "EHPS",
+        "STEERING"
+      ],
+      "base_criticality": 88
+    },
+    "ADAS": {
+      "aliases": [
+        "FCM",
+        "ADAS",
+        "FLC",
+        "CAMERA",
+        "RADAR",
+        "ACC"
+      ],
+      "base_criticality": 82
+    },
+    "BODY": {
+      "aliases": [
+        "BCM",
+        "BDC",
+        "BODY"
+      ],
+      "base_criticality": 78
+    },
+    "CLUSTER": {
+      "aliases": [
+        "IPC",
+        "CLUSTER",
+        "KOMBI"
+      ],
+      "base_criticality": 65
+    },
+    "RESTRAINTS": {
+      "aliases": [
+        "RCM",
+        "SRS",
+        "AIRBAG",
+        "ACU"
+      ],
+      "base_criticality": 86
+    },
+    "TRANSFER_CASE": {
+      "aliases": [
+        "TCCM",
+        "TRANSFER",
+        "TC4X4"
+      ],
+      "base_criticality": 72
+    },
+    "INFOTAINMENT": {
+      "aliases": [
+        "HU",
+        "IVI",
+        "HMI",
+        "RADIO"
+      ],
+      "base_criticality": 50
+    },
+    "HVAC": {
+      "aliases": [
+        "HVAC",
+        "IHKA",
+        "CLIMATE"
+      ],
+      "base_criticality": 45
+    },
+    "OTHER": {
+      "aliases": [],
+      "base_criticality": 40
+    }
+  },
+  "dependencies": [
+    [
+      "GATEWAY",
+      "POWERTRAIN",
+      "CONFIGURATION_AND_COMMUNICATION"
+    ],
+    [
+      "GATEWAY",
+      "TRANSMISSION",
+      "CONFIGURATION_AND_COMMUNICATION"
+    ],
+    [
+      "GATEWAY",
+      "BRAKES",
+      "CONFIGURATION_AND_COMMUNICATION"
+    ],
+    [
+      "GATEWAY",
+      "STEERING",
+      "CONFIGURATION_AND_COMMUNICATION"
+    ],
+    [
+      "GATEWAY",
+      "ADAS",
+      "CONFIGURATION_AND_COMMUNICATION"
+    ],
+    [
+      "GATEWAY",
+      "BODY",
+      "CONFIGURATION_AND_COMMUNICATION"
+    ],
+    [
+      "GATEWAY",
+      "CLUSTER",
+      "CONFIGURATION_AND_COMMUNICATION"
+    ],
+    [
+      "GATEWAY",
+      "RESTRAINTS",
+      "CONFIGURATION_AND_COMMUNICATION"
+    ],
+    [
+      "GATEWAY",
+      "INFOTAINMENT",
+      "CONFIGURATION_AND_COMMUNICATION"
+    ],
+    [
+      "GATEWAY",
+      "HVAC",
+      "CONFIGURATION_AND_COMMUNICATION"
+    ],
+    [
+      "POWERTRAIN",
+      "TRANSMISSION",
+      "TORQUE_COORDINATION"
+    ],
+    [
+      "POWERTRAIN",
+      "TRANSFER_CASE",
+      "DRIVELINE_COORDINATION"
+    ],
+    [
+      "POWERTRAIN",
+      "BRAKES",
+      "TORQUE_AND_STABILITY_COORDINATION"
+    ],
+    [
+      "BRAKES",
+      "ADAS",
+      "VEHICLE_DYNAMICS_DATA"
+    ],
+    [
+      "BRAKES",
+      "STEERING",
+      "VEHICLE_DYNAMICS_DATA"
+    ],
+    [
+      "BODY",
+      "CLUSTER",
+      "BODY_STATUS_DATA"
+    ],
+    [
+      "BODY",
+      "HVAC",
+      "BODY_STATUS_DATA"
+    ],
+    [
+      "BODY",
+      "INFOTAINMENT",
+      "BODY_STATUS_DATA"
+    ]
+  ],
+  "network_health_weights": {
+    "node_compliance": 0.28,
+    "dependency_integrity": 0.24,
+    "release_consistency": 0.18,
+    "diagnostic_health": 0.14,
+    "critical_node_health": 0.16
+  },
+  "criticality_thresholds": {
+    "CRITICAL": 85,
+    "MAJOR": 65,
+    "NORMAL": 40,
+    "LOW": 0
+  },
+  "violation_rules": {
+    "upstream_wrong_release": 25,
+    "upstream_mismatch": 20,
+    "downstream_mismatch": 12,
+    "mixed_package": 15,
+    "persistent_network_dtc": 18,
+    "missing_dependency_node": 8
+  }
+}

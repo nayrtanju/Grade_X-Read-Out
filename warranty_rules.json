@@ -1,0 +1,59 @@
+{
+  "version": "8.3",
+  "recommendations": {
+    "NO_WARRANTY_ACTION": {
+      "priority": 1,
+      "label": "No warranty action",
+      "description": "The available evidence does not support a warranty intervention.",
+      "required_next_step": "Retain the report and continue normal monitoring."
+    },
+    "SOFTWARE_CORRECTION_FIRST": {
+      "priority": 2,
+      "label": "Software correction first",
+      "description": "Software configuration should be corrected and retested before hardware replacement is considered.",
+      "required_next_step": "Verify the approved software package, program when applicable, clear faults and repeat the assessment."
+    },
+    "FURTHER_DIAGNOSTIC_REQUIRED": {
+      "priority": 3,
+      "label": "Further diagnostic required",
+      "description": "The evidence is insufficient to authorize replacement or software-only correction.",
+      "required_next_step": "Follow the OEM diagnostic test plan and collect additional objective evidence."
+    },
+    "HARDWARE_VERIFICATION_REQUIRED": {
+      "priority": 4,
+      "label": "Hardware verification required",
+      "description": "Hardware or part-number compatibility must be confirmed before a warranty decision.",
+      "required_next_step": "Verify the installed ECU, replacement history, physical part number and compatibility."
+    },
+    "REPLACEMENT_REVIEW": {
+      "priority": 5,
+      "label": "Replacement review",
+      "description": "Replacement may be considered only after the specified diagnostic and configuration checks are completed.",
+      "required_next_step": "Obtain engineering or warranty authorization after confirming the fault and excluding programming/configuration causes."
+    },
+    "ENGINEERING_ESCALATION": {
+      "priority": 6,
+      "label": "Engineering escalation",
+      "description": "The vehicle contains critical, mixed or unresolved evidence requiring engineering review.",
+      "required_next_step": "Escalate the complete report, logs and vehicle history to the responsible engineering owner."
+    }
+  },
+  "thresholds": {
+    "good_health": 85,
+    "fair_health": 70,
+    "poor_health": 50,
+    "critical_risk_score": 80,
+    "replacement_review_confidence": 80,
+    "escalation_critical_ecus": 2
+  },
+  "weights": {
+    "average_risk": 0.45,
+    "maximum_risk": 0.25,
+    "persistent_dtc_penalty": 5,
+    "critical_ecu_penalty": 7,
+    "high_ecu_penalty": 3,
+    "regression_penalty": 5,
+    "compliance_bonus": 8
+  },
+  "disclaimer": "This is a decision-support recommendation and not an automatic warranty authorization."
+}
